@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-File : cis_benchmark_converter.py
-Author : Maxime Beauchamp
-LinkedIn : https://www.linkedin.com/in/maxbeauchamp/ 
-Created : 2024-11-06
+File : GIS-CIS-Benchmark.py
+Author : Andreas Breitenlohner
+LinkedIn : https://www.linkedin.com/in/breitenlohner/ 
+Created : 2024-11-29
 
 Description :
 This script extracts recommendations from CIS Benchmark PDF documents and exports 
@@ -12,7 +12,7 @@ them in CSV or Excel format, facilitating compliance checks and recommendation r
 by providing a more accessible format.
 
 Usage :
-python cis_benchmark_converter.py -i path/to/input_file.pdf -o path/to/output_file -f [csv|excel]
+python GIS-CIS-Benchmark.py -i path/to/input_file.pdf -o path/to/output_file -f [csv|excel]
 
 Arguments :
 -i, --input   : Path to the input CIS Benchmark PDF file.
