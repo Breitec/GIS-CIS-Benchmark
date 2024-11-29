@@ -1,4 +1,4 @@
-# GIS-CIS-Benchmark Converter
+# GIS-CIS-Benchmark
 
 **Author:** Andreas Breitenlohner  
 **LinkedIn:** [Andreas Breitenlohner](https://www.linkedin.com/in/breitenlohner/)  
