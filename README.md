@@ -1,8 +1,8 @@
 # GIS-CIS-Benchmark Converter
 
 **Author:** Andreas Breitenlohner  
-**LinkedIn:** [Maxime Beauchamp](https://www.linkedin.com/in/maxbeauchamp/)  
-**Date Created:** 2024-11-06
+**LinkedIn:** [Andreas Breitenlohner](https://www.linkedin.com/in/breitenlohner/)  
+**Date Created:** 2024-11-29
 
 ## Description
 
