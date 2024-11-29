@@ -26,7 +26,7 @@
 ## Usage
 
 ```bash
-python cis_benchmark_converter.py -i path/to/input_file.pdf -o path/to/output_file -f [csv|excel]
+python gis-cis-benchmark.py -i path/to/input_file.pdf -o path/to/output_file -f [csv|excel]
 ```
 
 ### Arguments
