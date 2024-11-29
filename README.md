@@ -1,6 +1,6 @@
-# CIS Benchmark Converter
+# GIS-CIS-Benchmark Converter
 
-**Author:** Maxime Beauchamp  
+**Author:** Andreas Breitenlohner  
 **LinkedIn:** [Maxime Beauchamp](https://www.linkedin.com/in/maxbeauchamp/)  
 **Date Created:** 2024-11-06
 
