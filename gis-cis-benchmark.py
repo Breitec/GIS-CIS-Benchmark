@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-File : GIS-CIS-Benchmark.py
+File : gis-cis-benchmark.py
 Author : Andreas Breitenlohner
 LinkedIn : https://www.linkedin.com/in/breitenlohner/ 
 Created : 2024-11-29
@@ -12,7 +12,7 @@ them in CSV or Excel format, facilitating compliance checks and recommendation r
 by providing a more accessible format.
 
 Usage :
-python GIS-CIS-Benchmark.py -i path/to/input_file.pdf -o path/to/output_file -f [csv|excel]
+python gis-cis-benchmark.py -i path/to/input_file.pdf -o path/to/output_file -f [csv|excel]
 
 Arguments :
 -i, --input   : Path to the input CIS Benchmark PDF file.
