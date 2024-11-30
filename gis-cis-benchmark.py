@@ -59,7 +59,7 @@ init(autoreset=True)
 # Regular expressions for extracting recommendations and cleaning text
 recommendation_pattern = re.compile(r'^\s*(\d+(?:\.\d+)+)\s+(.+)')  # Matches numbers like 1.1.1, 2.2.2.2, etc.
 remove_pattern = re.compile(r'Page\s\d{1,3}|•')
-title_pattern = re.compile(r'^(\d+\.\d+(?:\.\d+)*)\s*(\((?:L\d+|BL)\))?\s*(.*)')
+title_pattern = re.compile(r'^(\d+\.\d+(?:\.\d+)*)\s*(\((?:L\d+|BL|NG)\))?\s*(.*)') # add BL and NG
 # title_pattern = re.compile(r'^(\d+\.\d+(?:\.\d+)*)\s*(\(L\d+\))?\s*(.*)')
 
 # Pattern to remove page numbers (e.g., "Page 123")
