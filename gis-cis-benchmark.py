@@ -93,7 +93,7 @@ def extract_title_and_version(input_file):
             break
         else:
             title_lines.append(line.strip())
-    title = " ".join(title_lines) if title_lines else "CIS Benchmark Document"
+    title = " ".join(title_lines) if title_lines else "GIS - CIS Benchmark Document"
     return title, version
 
 # Generate a unique filename if the file already exists
