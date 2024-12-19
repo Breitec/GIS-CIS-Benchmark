@@ -140,17 +140,21 @@ def write_output(recommendations, output_file, output_format, title, version):
             row = [recommendation.get(header, '') for header in headers]
             sheet.append(row)
 
-        dv = DataValidation(type="list", formula1='"Compliant,Non-Compliant,To Review"', showDropDown=False)
+        dv = DataValidation(type="list", formula1='"Compliant,Non-Compliant in Progress,Non-Compliant with additional Information,To Review, To Discuss"', showDropDown=False)
         sheet.add_data_validation(dv)
         for row_idx in range(5, len(recommendations) + 5):
             dv.add(sheet[f"A{row_idx}"])
 
         compliant_fill = PatternFill(start_color="C6EFCE", end_color="C6EFCE", fill_type="solid")
-        non_compliant_fill = PatternFill(start_color="FFC7CE", end_color="FFC7CE", fill_type="solid")
+        non_compliant_progress_fill = PatternFill(start_color="FFC7CE", end_color="FFC7CE", fill_type="solid")
+        non_compliant_additional_fill = PatternFill(start_color="FFC7CE", end_color="FFC7CE", fill_type="solid")
         to_review_fill = PatternFill(start_color="D9D9D9", end_color="D9D9D9", fill_type="solid")
+        to_discuss_fill = PatternFill(start_color="D9D9D9", end_color="D9D9D9", fill_type="solid")
         compliant_rule = FormulaRule(formula=['$A5="Compliant"'], fill=compliant_fill)
-        non_compliant_rule = FormulaRule(formula=['$A5="Non-Compliant"'], fill=non_compliant_fill)
+        non_compliant_rule = FormulaRule(formula=['$A5="Non-Compliant in Progress"'], fill=non_compliant_progress_fill)
+        non_compliant_additional_rule = FormulaRule(formula=['$A5="Non-Compliant with additional Information"'], fill=non_compliant_additional_fill)
         to_review_rule = FormulaRule(formula=['$A5="To Review"'], fill=to_review_fill)
+        to_discuss_rule = FormulaRule(formula=['$A5="To Review"'], fill=to_review_fill)
         
         sheet.conditional_formatting.add(f"A5:A{len(recommendations) + 5}", compliant_rule)
         sheet.conditional_formatting.add(f"A5:A{len(recommendations) + 5}", non_compliant_rule)
