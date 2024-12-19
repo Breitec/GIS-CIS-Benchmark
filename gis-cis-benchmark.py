@@ -147,9 +147,9 @@ def write_output(recommendations, output_file, output_format, title, version):
 
         compliant_fill = PatternFill(start_color="C6EFCE", end_color="C6EFCE", fill_type="solid")
         non_compliant_progress_fill = PatternFill(start_color="FFC7CE", end_color="FFC7CE", fill_type="solid")
-        non_compliant_additional_fill = PatternFill(start_color="FFC7CE", end_color="FFC7CE", fill_type="solid")
+        non_compliant_additional_fill = PatternFill(start_color="ff0322", end_color="ff0322", fill_type="solid")
         to_review_fill = PatternFill(start_color="D9D9D9", end_color="D9D9D9", fill_type="solid")
-        to_discuss_fill = PatternFill(start_color="D9D9D9", end_color="D9D9D9", fill_type="solid")
+        to_discuss_fill = PatternFill(start_color="ffff00", end_color="ffff00", fill_type="solid")
         compliant_rule = FormulaRule(formula=['$A5="Compliant"'], fill=compliant_fill)
         non_compliant_progress_rule = FormulaRule(formula=['$A5="Non-Compliant in Progress"'], fill=non_compliant_progress_fill)
         non_compliant_additional_rule = FormulaRule(formula=['$A5="Non-Compliant with additional Information"'], fill=non_compliant_additional_fill)
