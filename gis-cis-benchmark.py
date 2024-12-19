@@ -93,7 +93,7 @@ def extract_title_and_version(input_file):
             break
         else:
             title_lines.append(line.strip())
-    title = " ".join(title_lines) if title_lines else "GIS - CIS Benchmark Document"
+    title = " ".join(title_lines) if title_lines else "GIS - Guideline"
     return title, version
 
 # Generate a unique filename if the file already exists
@@ -112,7 +112,7 @@ def write_output(recommendations, output_file, output_format, title, version):
         headers = ['Compliance Status', 'Number', 'Level', 'Title'] + [sec[:-1] for sec in sections if sec != 'CIS Controls:']
         with open(output_file, mode='w', newline='', encoding='utf-8') as file:
             writer = csv.writer(file, delimiter='|')
-            writer.writerow([title if title else "CIS Benchmark Document"])
+            writer.writerow([title if title else "GIS - Guideline"])
             writer.writerow([version if version else ""])
             writer.writerow([])  # Empty row for spacing
             writer.writerow(headers)  # Column headers
@@ -126,7 +126,7 @@ def write_output(recommendations, output_file, output_format, title, version):
         workbook = Workbook()
         sheet = workbook.active
         sheet.title = "Recommendations"
-        sheet["A1"] = title if title else "CIS Benchmark Document"
+        sheet["A1"] = title if title else "GIS - Guideline"
         sheet["A1"].font = Font(size=14, bold=True)
         sheet["A2"] = version if version else ""
         sheet["A2"].font = Font(size=12, italic=True)
@@ -157,7 +157,7 @@ def write_output(recommendations, output_file, output_format, title, version):
         sheet.conditional_formatting.add(f"A5:A{len(recommendations) + 5}", to_review_rule)
 
         # Add table style
-        tab = Table(displayName="CISRecommendations", ref=f"A4:{chr(65+len(headers)-1)}{len(recommendations) + 4}")
+        tab = Table(displayName="GISRecommendations", ref=f"A4:{chr(65+len(headers)-1)}{len(recommendations) + 4}")
         style = TableStyleInfo(name="TableStyleMedium9", showFirstColumn=False, showLastColumn=False, showRowStripes=True, showColumnStripes=True)
         tab.tableStyleInfo = style
         sheet.add_table(tab)
