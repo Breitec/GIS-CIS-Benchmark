@@ -154,11 +154,13 @@ def write_output(recommendations, output_file, output_format, title, version):
         non_compliant_rule = FormulaRule(formula=['$A5="Non-Compliant in Progress"'], fill=non_compliant_progress_fill)
         non_compliant_additional_rule = FormulaRule(formula=['$A5="Non-Compliant with additional Information"'], fill=non_compliant_additional_fill)
         to_review_rule = FormulaRule(formula=['$A5="To Review"'], fill=to_review_fill)
-        to_discuss_rule = FormulaRule(formula=['$A5="To Review"'], fill=to_review_fill)
+        to_discuss_rule = FormulaRule(formula=['$A5="To Discuss"'], fill=to_discuss_fill)
         
         sheet.conditional_formatting.add(f"A5:A{len(recommendations) + 5}", compliant_rule)
-        sheet.conditional_formatting.add(f"A5:A{len(recommendations) + 5}", non_compliant_rule)
+        sheet.conditional_formatting.add(f"A5:A{len(recommendations) + 5}", non_compliant_progress_rule)
+        sheet.conditional_formatting.add(f"A5:A{len(recommendations) + 5}", non_compliant_additional_rule)
         sheet.conditional_formatting.add(f"A5:A{len(recommendations) + 5}", to_review_rule)
+        sheet.conditional_formatting.add(f"A5:A{len(recommendations) + 5}", to_discuss_rule)
 
         # Add table style
         tab = Table(displayName="GISRecommendations", ref=f"A4:{chr(65+len(headers)-1)}{len(recommendations) + 4}")
