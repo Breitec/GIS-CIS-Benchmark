@@ -38,7 +38,7 @@ python gis-cis-benchmark.py -i path/to/input_file.pdf -o path/to/output_file -f 
 ## Example
 
 ```bash
-python gis-cis_benchmark_converter.py -i ./CIS_AWS_Benchmark.pdf -o ./CIS_AWS_Benchmark.xlsx -f excel
+python gis-cis-benchmark.py -i ./CIS_AWS_Benchmark.pdf -o ./CIS_AWS_Benchmark.xlsx -f excel
 ```
 
 ## File Structure
